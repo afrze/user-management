@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>User Management</title>
+{% endblock %}
+
+{% block body %}
+<body>
+  <div>
+    <h1>User Management</h1>
+
+    <table>
+      <tr>
+        <th>Users</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>
+          <a href="">Delete</a>
+          <br />
+          <a href="">Update</a>
+        </td>
+      </tr>
+    </table>
+
+    <form actions="/" method="post">
+      <label>Enter User's Name</label>
+      <input type="text" name="user" id="user"/>
+      <input type="submit" value="Add User"/>
+    </form>
+  </div>
+</body>
+{% endblock %}
