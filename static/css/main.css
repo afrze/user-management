@@ -7,3 +7,68 @@
 body {
   font-family: sans-serif;
 }
+
+header {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.wrap {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+table {
+  margin: 40px 0;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+tr > th {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid grey;
+}
+
+tr >  td {
+  padding: 10px;
+  border: 1px solid grey
+}
+
+tr > .action {
+  display: flex;
+  justify-content: space-around;
+}
+
+#user {
+  border: none;
+  padding: 10px;
+  outline: none;
+  border-bottom: 1px solid grey;
+}
+
+.action > a{
+  text-decoration: none;
+}
+
+.delete {
+  color: white;
+  border: 1px solid #bb2e2e;
+  padding: 5px 10px;
+  background-color: #bb2e2e;
+}
+
+.update {
+  color: white;
+  border: 1px solid #5454f1;
+  padding: 5px 10px;
+  background-color: #5454f1;
+}
+
+.main {
+  color: white;
+  border: 1px solid #5454f1;
+  padding: 5px 10px;
+  background-color: #5454f1;
+}

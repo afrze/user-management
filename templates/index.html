@@ -1,36 +1,35 @@
-{% extends 'base.html' %}
-
-{% block head %}
+{% extends 'base.html' %} {% block head %}
 <title>User Management</title>
-{% endblock %}
-
-{% block body %}
-<body>
-  <div>
+{% endblock %} {% block body %}
+<div class="wrap">
+  <header>
     <h1>User Management</h1>
+  </header>
 
-    <table>
-      <tr>
-        <th>Users</th>
-        <th>Name</th>
-        <th>Actions</th>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td>
-          <a href="">Delete</a>
-          <br />
-          <a href="">Update</a>
-        </td>
-      </tr>
-    </table>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
 
-    <form actions="/" method="post">
-      <label>Enter User's Name</label>
-      <input type="text" name="user" id="user"/>
-      <input type="submit" value="Add User"/>
-    </form>
-  </div>
-</body>
+    {% for user in users %}
+    <tr>
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td class="action">
+        <a class="delete" href="/delete/{{ user.id }}">Delete</a>
+        <br />
+        <a class="update" href="/update/{{ user.id }}">Update</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <form actions="/" method="post">
+    <label>Enter User's Name</label>
+    <input type="text" name="user" id="user" />
+    <input type="submit" value="Add User" />
+  </form>
+</div>
 {% endblock %}

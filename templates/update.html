@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>User Management</title>
+{% endblock %}
+
+{% block body %}
+<body>
+  <div class="wrap">
+    <header>
+      <h1>User Update</h1>
+    </header>
+
+    <form actions="/update/{{ user.id }}" method="post">
+      <label>Update User's Name</label>
+      <input type="text" name="user" id="user" value="{{ user.name }}"/>
+      <input class="main" type="submit" value="Update User"/>
+    </form>
+  </div>
+</body>
+{% endblock %}
